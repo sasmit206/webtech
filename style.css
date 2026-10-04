@@ -1,0 +1,98 @@
+:root {
+    --text: #ffffff;
+    --text-muted: #a1a1aa;
+    --accent: #d4ff00;
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-brd: rgba(255, 255, 255, 0.1);
+    --glass-shine: rgba(255, 255, 255, 0.25);
+    --shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+html { scroll-behavior: smooth; scroll-padding-top: 140px; }
+body { background: radial-gradient(circle at 15% 50%, rgba(212, 255, 0, 0.06), transparent 50%), radial-gradient(circle at 85% 30%, rgba(212, 255, 0, 0.08), transparent 50%), #121212; background-attachment: fixed; color: var(--text); line-height: 1.7; padding-top: 110px; font-weight: 300; }
+
+a { color: var(--accent); text-decoration: none; transition: all 0.3s ease; }
+a:hover { color: #fff; text-shadow: 0 0 10px rgba(212, 255, 0, 0.5); }
+
+/* Ultra-Sleek Glass */
+.glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 100%);
+    backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--glass-brd);
+    border-top-color: var(--glass-shine); border-left-color: var(--glass-shine);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+/* Neon Pill Segmented Dock (Slim & Wide) */
+nav.glass { position: fixed; top: 15px; left: 50%; transform: translateX(-50%); width: 95%; max-width: 1100px; display: flex; justify-content: center; align-items: center; padding: 6px 10px; z-index: 1000; background: #18181b; border: none; border-radius: 9999px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+nav.glass .links { display: flex; gap: 4px; align-items: center; }
+nav.glass .links a { color: #a1a1aa; font-size: 0.85rem; font-weight: 400; padding: 6px 16px; border-radius: 9999px; transition: all 0.2s ease; letter-spacing: 0; text-transform: none; }
+nav.glass .links a:hover,
+body:not(:has(:target)) nav.glass .links a[href="#hero"],
+body:has(#hero:target) nav.glass .links a[href="#hero"], 
+body:has(#about:target) nav.glass .links a[href="#about"], 
+body:has(#education:target) nav.glass .links a[href="#education"], 
+body:has(#internships:target) nav.glass .links a[href="#internships"], 
+body:has(#skills:target) nav.glass .links a[href="#skills"], 
+body:has(#interests:target) nav.glass .links a[href="#interests"], 
+body:has(#contact:target) nav.glass .links a[href="#contact"] { 
+    color: #111; background: #d4ff00; box-shadow: 0 0 0 2px #18181b, 0 0 0 3px #d4ff00; text-shadow: none; font-weight: 500; 
+}
+
+/* Layout */
+main { max-width: 950px; margin: auto; padding: 0 25px; display: flex; flex-direction: column; gap: 3.5rem; }
+section { padding: 40px; position: relative; }
+
+/* Sleek Title Bar */
+.title-bar {
+    background: linear-gradient(90deg, rgba(255,255,255,0.15), transparent);
+    margin: -40px -40px 30px -40px; padding: 12px 40px;
+    border-radius: 20px 20px 0 0; border-bottom: 1px solid var(--glass-brd);
+    font-size: 0.75rem; font-weight: 600; color: var(--text-muted); letter-spacing: 3px; text-transform: uppercase;
+}
+
+/* Hero */
+#hero { display: flex; align-items: center; justify-content: space-between; gap: 4rem; padding: 0; background: none; border: none; box-shadow: none; backdrop-filter: none; }
+.hero-text { flex: 1; padding: 50px; }
+.hero-text h1 { font-size: 4.5rem; font-weight: 200; letter-spacing: -2px; margin-bottom: 10px; line-height: 1; color: #fff; }
+.hero-text p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 25px; font-weight: 400; }
+.profile-container { position: relative; width: 240px; height: 240px; margin-top: 40px; flex-shrink: 0; margin-left: auto; margin-right: auto; }
+.profile-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%; box-shadow: var(--shadow); border: 2px solid var(--glass-shine); position: relative; z-index: 2; }
+.circular-text { position: absolute; width: 300px; height: 300px; top: -30px; left: -30px; pointer-events: none; animation: spin 20s linear infinite; z-index: 1; }
+.circular-text text { fill: var(--accent); font-size: 15px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+h2 { font-weight: 300; font-size: 2.2rem; margin-bottom: 20px; color: #fff; }
+
+.tags { display: flex; gap: 12px; flex-wrap: wrap; }
+.tags span { background: rgba(0,0,0,0.25); padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; border: 1px solid var(--glass-brd); color: var(--text-muted); letter-spacing: 0.5px; }
+
+.btn { display: inline-block; margin-top: 25px; padding: 12px 28px; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: var(--accent); border-radius: 30px; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; }
+.btn:hover { background: var(--accent); color: #111; box-shadow: 0 0 20px rgba(212,255,0,0.4); transform: translateY(-2px); }
+
+/* Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+.card { background: rgba(0,0,0,0.15); padding: 30px; border-radius: 16px; border: 1px solid var(--glass-brd); transition: all 0.3s ease; }
+.card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); border-color: var(--glass-shine); }
+.card h3 { color: var(--accent); font-weight: 400; font-size: 1.3rem; margin-bottom: 10px; }
+.card p, .card small { color: var(--text-muted); font-size: 0.95rem; }
+.card strong { color: #fff; font-weight: 500; font-size: 1.1rem; }
+
+.contact-list p { margin-bottom: 15px; font-size: 1.1rem; }
+.contact-list b { color: #fff; font-weight: 500; display: inline-block; width: 90px; }
+
+footer { text-align: center; padding: 50px; color: rgba(255,255,255,0.4); font-size: 0.85rem; letter-spacing: 1px; }
+
+@media (max-width: 800px) {
+    nav.glass { padding: 10px; flex-direction: column; gap: 10px; border-radius: 20px; top: 10px; width: 95%; }
+    nav.glass .links { gap: 4px; flex-wrap: wrap; justify-content: center; padding-right: 0; }
+    #hero { flex-direction: column-reverse; text-align: center; gap: 2rem; }
+    .hero-text h1 { font-size: 3.5rem; }
+    .hero-text p { font-size: 1.1rem; }
+    .profile-container { width: 180px; height: 180px; margin-top: 20px; }
+    .circular-text { width: 225px; height: 225px; top: -22.5px; left: -22.5px; }
+    .tags { justify-content: center; }
+    .contact-list b { width: auto; margin-right: 15px; }
+}
