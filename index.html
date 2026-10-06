@@ -3,122 +3,824 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sasmit - Personal Profile</title>
+    <title>Sasmit — Full-Stack &amp; ML Engineer</title>
+    <meta name="description" content="Portfolio of Sasmit, pre-final year IT undergrad at MIT Manipal, Full-Stack &amp; ML Engineer, GSIH '26 Finalist.">
+
+    <!-- Google Fonts: Instrument Serif (Editorial Serif) & Plus Jakarta Sans (Crisp Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="glass">
-        <div class="links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#internships">Internships</a>
-            <a href="#skills">Skills</a>
-            <a href="#interests">Interests</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+
+    <!-- Ambient Backdrop Glows: Electric Cobalt & Cyan -->
+    <div class="ambient-glow ambient-glow-hero" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-works" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-bottom" aria-hidden="true"></div>
+
+    <!-- 1. MINIMAL FLOATING NAVIGATION -->
+    <header class="site-header">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="#hero" class="nav-brand" aria-label="Sasmit Home">
+                <span class="brand-name">Sasmit</span>
+                <span class="brand-dot"></span>
+            </a>
+
+            <div class="nav-badge-center">
+                <span class="laurel-symbol">✦</span>
+                <span class="nav-badge-text">GSIH '26 Finalist &bull; MIT Manipal</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Works</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-cta-btn">
+                    <span>Contact</span>
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section id="hero">
-            <div class="hero-text glass">
-                <h1>Sasmit</h1>
-                <p>Pre-final year IT undergrad at MIT, Manipal.</p>
-                <div class="tags">
-                    <span>Vice Chairperson, IECSE Manipal</span>
-                    <span>ML Head, TDA Manipal</span>
-                </div>
-            </div>
-            <div class="profile-container">
-                <img src="image.jpeg" alt="Profile" class="profile-img glass">
-                <svg class="circular-text" viewBox="0 0 300 300">
-                    <defs>
-                        <path id="circlePath" d="M 150, 15 a 135,135 0 1,1 0,270 a 135,135 0 1,1 0,-270" />
-                    </defs>
-                    <text>
-                        <textPath href="#circlePath" startOffset="0%">
-                            0101010101 0101010101 0101010101 0101010101 0101010101 0101010101 0101010101 0101010101 
-                        </textPath>
-                    </text>
-                </svg>
-            </div>
-        </section>
+        <!-- 2. HERO SECTION (Photo on Left, "Hi I'm Sasmit" on Right) -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-split-layout">
+                    <!-- LEFT COLUMN: Photo, Radiant Halo & Availability Pill -->
+                    <div class="hero-left-visual">
+                        <div class="hero-glow-orb" aria-hidden="true"></div>
+                        <div class="hero-portrait-card">
+                            <img src="image.jpeg" alt="Portrait of Sasmit" class="hero-portrait-img">
+                        </div>
+                        <div class="hero-float-availability">
+                            <span class="status-dot-pulse" aria-hidden="true"></span>
+                            <span>Available for opportunities</span>
+                        </div>
+                    </div>
 
-        <section id="about" class="glass has-title">
-            <div class="title-bar">About</div>
-            <p>Writing. Reading. Existing.</p>
-            <a href="https://www.manipalthetalk.org/articles/authors/Sasmit" target="_blank" rel="noopener noreferrer" class="btn">Writings @ MTTN</a>
-        </section>
+                    <!-- RIGHT COLUMN: "Hi I'm Sasmit" Typography, Bio & Actions -->
+                    <div class="hero-right-content">
+                        <div class="hero-supertitle">
+                            <span class="award-icon">✦</span>
+                            <span>Pre-Final Year IT &bull; Manipal Institute of Technology</span>
+                        </div>
+                        <h1 class="hero-title-main">Hi I'm Sasmit</h1>
+                        <div class="hero-title-sub">Software &amp; ML Engineer</div>
+                        <p class="hero-pitch-desc">
+                            Passionate about creating resilient distributed systems, intelligent ML pipelines, and thoughtful software that connects users with value.
+                        </p>
 
-        <section id="education" class="glass has-title">
-            <div class="title-bar">Education</div>
-            <h2>B.Tech in Information Technology</h2>
-            <div class="card">
-                Manipal Institute of Technology (MIT), Manipal<br>
-                <small>2024–2028</small>
-            </div>
-        </section>
+                        <!-- Recognition Strip -->
+                        <div class="hero-recognition-strip">
+                            <div class="recognition-avatars" aria-hidden="true">
+                                <span class="recog-circle">GS</span>
+                                <span class="recog-circle">MIT</span>
+                            </div>
+                            <div class="recognition-text">
+                                <strong>GSIH '26 Finalist</strong> &bull; Top 90 of 30,000+ nationwide
+                            </div>
+                        </div>
 
-        <section id="internships" class="glass has-title">
-            <div class="title-bar">Experience</div>
-            <h2>Internships</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>ML Intern</h3>
-                    <strong>Tata Steel</strong>
-                </div>
-                <div class="card">
-                    <h3>Tech Intern</h3>
-                    <strong>Finqy</strong>
-                </div>
-            </div>
-        </section>
-
-        
-
-        <section id="skills" class="glass has-title">
-            <div class="title-bar">System.Capabilities</div>
-            <h2>Skills</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>MERN Stack</h3>
-                    <p>MongoDB &middot; Express.js &middot; React &middot; Node.js</p>
-                </div>
-                <div class="card">
-                    <h3>Generative AI</h3>
-                    <p>Generative AI applications and LLM-based systems</p>
-                </div>
-                <div class="card">
-                    <h3>RAG Pipelines</h3>
-                    <p>Retrieval-Augmented Generation pipelines</p>
+                        <!-- Action Button Row -->
+                        <div class="hero-actions-row">
+                            <a href="#contact" class="hero-cta-btn">
+                                <span>Get in Touch</span>
+                                <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+                            </a>
+                            <a href="#projects" class="hero-secondary-btn">
+                                <span>Explore Selected Works</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="interests" class="glass has-title">
-            <div class="title-bar">User.Interests</div>
-            <h2>Interests</h2>
-            <div class="tags">
-                <span>Writing</span>
-                <span>Reading</span>
-                <span>Existing</span>
+        <!-- 3. AFFILIATIONS / CLIENT LOGOS MARQUEE STRIP -->
+        <section class="marquee-strip-section" aria-label="Organizations & Affiliations">
+            <div class="container">
+                <div class="affiliations-grid">
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>Tata Steel</span>
+                    </div>
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>Finqy</span>
+                    </div>
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>Olus Informatics</span>
+                    </div>
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>IECSE Manipal</span>
+                    </div>
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>The Data Alchemists</span>
+                    </div>
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>MIT Manipal</span>
+                    </div>
+                    <div class="affiliation-item">
+                        <span class="affiliation-icon">✦</span>
+                        <span>MTTN</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="glass has-title">
-            <div class="title-bar">Network.Connections</div>
-            <h2>Contact</h2>
-            <div class="contact-list">
-                <p><b>Email:</b> <a href="mailto:sasmit206@gmail.com">sasmit206@gmail.com</a></p>
-                <p><b>GitHub:</b> <a href="https://github.com/sasmit206" target="_blank" rel="noopener noreferrer">github.com/sasmit206</a></p>
-                <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sasmit206/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sasmit206/</a></p>
-                <p><b>X:</b> <a href="https://x.com/sasmit206" target="_blank" rel="noopener noreferrer">x.com/sasmit206</a></p>
+        <!-- 4. HIGHLIGHTS BANNER (Seen Recent Works Teaser) -->
+        <section class="highlights-banner-section">
+            <div class="container">
+                <div class="showcase-preview-card">
+                    <div class="showcase-ambient-halo" aria-hidden="true"></div>
+                    <div class="showcase-header">
+                        <div class="showcase-tag">
+                            <span>✦</span>
+                            <span>Seen Recent Works &amp; Metrics</span>
+                        </div>
+                        <div class="showcase-subtext">
+                            Industrial ML models &bull; Distributed caching &bull; Semantic RAG retrieval
+                        </div>
+                    </div>
+                    <div class="metrics-row">
+                        <div class="metric-item">
+                            <div class="metric-num">~23% <em>&darr;</em></div>
+                            <div class="metric-label">
+                                <strong>RMSE Reduction</strong>
+                                Industrial prediction with Random Forest at Tata Steel
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">60% <em>&darr;</em></div>
+                            <div class="metric-label">
+                                <strong>Latency Reduction</strong>
+                                Redis caching on CodeCast distributed platform
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">3,413</div>
+                            <div class="metric-label">
+                                <strong>Insurance Schemes</strong>
+                                Indexed with LangChain &amp; Vector RAG on Sahayak AI
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">Top 90</div>
+                            <div class="metric-label">
+                                <strong>National Finalist</strong>
+                                Goldman Sachs India Hackathon from 30,000+ candidates
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ABOUT / PHILOSOPHY SECTION ("Hallo!") -->
+        <section id="about" class="about-section">
+            <div class="container container-narrow">
+                <div class="about-editorial-wrap">
+                    <div class="about-salutation">Hallo!</div>
+                    <p class="about-statement">
+                        focus is on blending <strong>robust distributed systems</strong>, <strong>thoughtful machine learning</strong>, and <strong>disciplined engineering</strong> to <em>craft platforms that perform</em> under real-world pressure.
+                    </p>
+
+                    <!-- Floating Pill Tags Around Statement -->
+                    <div class="about-floating-tags">
+                        <div class="editorial-tag-pill">
+                            <span class="tag-dot tag-dot-blue"></span>
+                            <span>Distributed Systems</span>
+                        </div>
+                        <div class="editorial-tag-pill">
+                            <span class="tag-dot tag-dot-cyan"></span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="editorial-tag-pill">
+                            <span class="tag-dot tag-dot-indigo"></span>
+                            <span>RAG Pipelines</span>
+                        </div>
+                        <div class="editorial-tag-pill">
+                            <span class="tag-dot tag-dot-amber"></span>
+                            <span>Docker &amp; Sandboxing</span>
+                        </div>
+                        <div class="editorial-tag-pill">
+                            <span class="tag-dot tag-dot-purple"></span>
+                            <span>Full-Stack Web</span>
+                        </div>
+                        <div class="editorial-tag-pill">
+                            <span class="tag-dot tag-dot-coral"></span>
+                            <span>Sensor Fusion</span>
+                        </div>
+                    </div>
+
+                    <!-- Editorial Narrative Split Card -->
+                    <div class="about-sub-card">
+                        <div class="narrative-col-header">
+                            <h3>Systems thinker with an eye for craft.</h3>
+                            <p>Currently pursuing a B.Tech in Information Technology at Manipal Institute of Technology (2024&ndash;2028). Active in technical student leadership as Vice Chairperson of IECSE Manipal and Head of AI/ML at The Data Alchemists (TDA).</p>
+                        </div>
+                        <div class="narrative-col-content">
+                            <div class="mttn-quote-box">
+                                <p>&ldquo;Writing. Reading. Existing.&rdquo;</p>
+                                <span>Author &bull; Manipal The Talk Network (MTTN)</span>
+                            </div>
+                            <a href="https://www.manipalthetalk.org/articles/authors/Sasmit" target="_blank" rel="noopener noreferrer" class="mttn-link-btn">
+                                <span>Read Writings @ MTTN</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. EXPERIENCE / ROLES SECTION (Inspired by Process: 01, 02, 03) -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="experience-header-block">
+                    <span class="section-meta-tag">/ Roles &amp; Trajectory</span>
+                    <h2 class="section-headline">Here's how experience shapes execution</h2>
+                </div>
+
+                <!-- Connected 3-Card Flow -->
+                <div class="process-flow-wrapper">
+                    <!-- Curved Connecting Line on Desktop: Electric Cobalt Path -->
+                    <div class="process-curve-connector" aria-hidden="true">
+                        <svg viewBox="0 0 900 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                            <!-- Loop from 01 to 02 -->
+                            <path d="M 220 25 C 290 5, 340 55, 410 25" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="220" cy="25" r="4" fill="#2563eb"/>
+                            <circle cx="410" cy="25" r="4" fill="#2563eb"/>
+                            <!-- Loop from 02 to 03 -->
+                            <path d="M 520 25 C 590 55, 640 5, 710 25" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="520" cy="25" r="4" fill="#2563eb"/>
+                            <circle cx="710" cy="25" r="4" fill="#2563eb"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-grid">
+                        <!-- Role 01: Olus Informatics -->
+                        <div class="process-card">
+                            <div class="process-card-top">
+                                <span class="process-step-num">01</span>
+                                <span class="process-period-pill">Feb 2026 &ndash; May 2026</span>
+                            </div>
+                            <h3 class="process-card-company">Olus Informatics</h3>
+                            <div class="process-card-role">Research &amp; ML Intern</div>
+                            <p class="process-card-desc">Engineered an end-to-end PM10 estimation pipeline using PM2.5 sensor measurements, combining real-world particulate-matter sensor data with reference-instrument observations.</p>
+                            <ul class="process-bullets">
+                                <li>Conducted exploratory analysis and PM2.5&ndash;PM10 ratio characterization.</li>
+                                <li>Field-to-reference comparison assessing measurement consistency and drift.</li>
+                            </ul>
+                            <div class="process-tech-pills">
+                                <span class="tech-tiny-tag">Python</span>
+                                <span class="tech-tiny-tag">Sensor Fusion</span>
+                                <span class="tech-tiny-tag">Data Modeling</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 02: Finqy -->
+                        <div class="process-card">
+                            <div class="process-card-top">
+                                <span class="process-step-num">02</span>
+                                <span class="process-period-pill">June 2026 &ndash; July 2026</span>
+                            </div>
+                            <h3 class="process-card-company">Finqy</h3>
+                            <div class="process-card-role">Technology Intern</div>
+                            <p class="process-card-desc">Designed and executed 80+ structured test cases across Leads, Payments, Reports, and Customer Management modules for a large-scale CRM platform.</p>
+                            <ul class="process-bullets">
+                                <li>Identified and documented 10+ functional defects across complex CRUD workflows.</li>
+                                <li>Substantially reduced post-release bug density and enhanced system reliability.</li>
+                            </ul>
+                            <div class="process-tech-pills">
+                                <span class="tech-tiny-tag">CRM Workflows</span>
+                                <span class="tech-tiny-tag">QA Architecture</span>
+                                <span class="tech-tiny-tag">CRUD Integrity</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 03: Tata Steel -->
+                        <div class="process-card">
+                            <div class="process-card-top">
+                                <span class="process-step-num">03</span>
+                                <span class="process-period-pill">December 2025</span>
+                            </div>
+                            <h3 class="process-card-company">Tata Steel</h3>
+                            <div class="process-card-role">ML Intern &bull; AI Wing</div>
+                            <p class="process-card-desc">Benchmarked Linear Regression and Random Forest models for high-stakes industrial predictions within the Artificial Intelligence Wing.</p>
+                            <ul class="process-bullets">
+                                <li>Achieved ~23% reduction in RMSE using tailored Random Forest models.</li>
+                                <li>Built an ML optimization pipeline projecting up to 12% reduction in emissions.</li>
+                            </ul>
+                            <div class="process-tech-pills">
+                                <span class="tech-tiny-tag">Random Forest</span>
+                                <span class="tech-tiny-tag">Scikit-learn</span>
+                                <span class="tech-tiny-tag">Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact & Leadership Recognition Cards -->
+                <div class="impact-recognition-row">
+                    <div class="impact-card">
+                        <div class="impact-quote-mark">&ldquo;</div>
+                        <p class="impact-text">
+                            Selected among the <strong>90 finalists shortlisted from 30,000+ applicants nationwide</strong> at the Goldman Sachs India Hackathon (GSIH 2026), demonstrating high-pressure problem solving, algorithmic rigor, and end-to-end technical execution.
+                        </p>
+                        <div class="impact-card-author">
+                            <div class="impact-avatar">GS</div>
+                            <div class="impact-author-meta">
+                                <h4>Goldman Sachs India Hackathon 2026</h4>
+                                <p>National Finalist Shortlist &bull; Top 0.3% of 30,000+</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-quote-mark">&ldquo;</div>
+                        <p class="impact-text">
+                            Directing technical strategy, peer development, and competitive events as <strong>Vice Chairperson at IECSE Manipal</strong> (premier computer science society) and <strong>Head of AI/ML at The Data Alchemists (TDA)</strong>.
+                        </p>
+                        <div class="impact-card-author">
+                            <div class="impact-avatar">MIT</div>
+                            <div class="impact-author-meta">
+                                <h4>Student Technical Leadership</h4>
+                                <p>IECSE Manipal &bull; The Data Alchemists (TDA)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SELECTED WORKS / CASE STUDIES SECTION -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="projects-header-block">
+                    <span class="section-meta-tag">/ New Projects</span>
+                    <h2 class="section-headline">Selected Works</h2>
+                </div>
+
+                <div class="works-editorial-grid">
+                    <!-- Project 1: CodeCast -->
+                    <article class="work-case-card">
+                        <div class="work-preview-stage">
+                            <div class="work-preview-ambient-glow" aria-hidden="true"></div>
+                            <!-- Pure CSS Mockup: CodeCast IDE & Sandbox -->
+                            <div class="mockup-ide-window">
+                                <div class="mockup-ide-bar">
+                                    <div class="ide-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <span class="ide-title-text">codecast://sandbox-runner.ts</span>
+                                    <span class="ide-tag-badge">Redis: 2,000 req/s</span>
+                                </div>
+                                <div class="mockup-ide-body">
+                                    <div><span class="code-comment">// Groq transcription &rarr; coding exercise</span></div>
+                                    <div><span class="code-keyword">const</span> exercise = <span class="code-keyword">await</span> <span class="code-fn">generateExercise</span>(videoTranscript);</div>
+                                    <div><span class="code-keyword">const</span> container = <span class="code-keyword">await</span> docker.<span class="code-fn">spawnSandbox</span>({ code });</div>
+                                </div>
+                                <div class="mockup-ide-output">
+                                    <span>&gt; Tests passed (Docker container 4b29f)</span>
+                                    <span class="status-ok">142ms &bull; 200 OK</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-case-content">
+                            <div class="work-case-header">
+                                <h3 class="work-case-title">CodeCast</h3>
+                                <span class="work-category-tags">Distributed Systems &bull; AI Learning</span>
+                            </div>
+                            <p class="work-case-desc">An AI-powered distributed learning platform serving 20+ active users that transforms YouTube educational videos into interactive coding exercises with isolated in-browser Docker sandboxes.</p>
+                            <ul class="work-feature-list">
+                                <li>Reduced exercise generation latency by 60% via Redis caching for transcripts &amp; Groq.</li>
+                                <li>Load-tested to seamlessly handle 2,000+ cached requests with Kafka task queues.</li>
+                            </ul>
+                            <div class="work-case-footer">
+                                <div class="work-stack-pills">
+                                    <span class="stack-pill">React</span>
+                                    <span class="stack-pill">Node.js</span>
+                                    <span class="stack-pill">Docker</span>
+                                    <span class="stack-pill">Redis</span>
+                                    <span class="stack-pill">Kafka</span>
+                                </div>
+                                <a href="https://github.com/sasmit206" target="_blank" rel="noopener noreferrer" class="work-link-action">
+                                    <span>View on GitHub</span>
+                                    <span aria-hidden="true">&nearr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Sahayak AI -->
+                    <article class="work-case-card">
+                        <div class="work-preview-stage">
+                            <div class="work-preview-ambient-glow" aria-hidden="true"></div>
+                            <!-- Pure CSS Mockup: Sahayak AI Chat & Vector Retrieval -->
+                            <div class="mockup-ai-chat">
+                                <div class="mockup-chat-header">
+                                    <div class="chat-bot-id">
+                                        <span class="chat-live-pulse"></span>
+                                        <span>Sahayak Citizen Bot</span>
+                                    </div>
+                                    <span class="chat-stat-pill">3,413 Schemes Indexed</span>
+                                </div>
+                                <div class="mockup-chat-content">
+                                    <div class="chat-bubble-user">
+                                        &ldquo;Find public health insurance with maternity coverage in Karnataka.&rdquo;
+                                    </div>
+                                    <div class="chat-bubble-ai">
+                                        <span>Top matching policy retrieved via LangChain vector embeddings:</span>
+                                        <div class="rag-scheme-match">
+                                            <strong>Ayushman Bharat &amp; PM-JAY</strong>
+                                            <span class="rag-score-tag">98.4% Match</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-case-content">
+                            <div class="work-case-header">
+                                <h3 class="work-case-title">Sahayak AI</h3>
+                                <span class="work-category-tags">Generative AI &bull; Civic Health</span>
+                            </div>
+                            <p class="work-case-desc">A RAG-based citizen assistance platform enabling natural-language discovery and comparison across 3,413 health insurance schemes with high semantic precision.</p>
+                            <ul class="work-feature-list">
+                                <li>Engineered vector embeddings pipeline and semantic search using PostgreSQL.</li>
+                                <li>Designed REST APIs with LangChain.js to deliver context-aware multilingual guidance.</li>
+                            </ul>
+                            <div class="work-case-footer">
+                                <div class="work-stack-pills">
+                                    <span class="stack-pill">React</span>
+                                    <span class="stack-pill">Node.js</span>
+                                    <span class="stack-pill">LangChain.js</span>
+                                    <span class="stack-pill">PostgreSQL</span>
+                                    <span class="stack-pill">Vector DB</span>
+                                </div>
+                                <a href="https://github.com/sasmit206" target="_blank" rel="noopener noreferrer" class="work-link-action">
+                                    <span>View on GitHub</span>
+                                    <span aria-hidden="true">&nearr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Udan Khatola -->
+                    <article class="work-case-card">
+                        <div class="work-preview-stage">
+                            <div class="work-preview-ambient-glow" aria-hidden="true"></div>
+                            <!-- Pure CSS Mockup: Airline Booking & Payment Verification -->
+                            <div class="mockup-booking-card">
+                                <div class="mockup-flight-strip">
+                                    <div class="flight-route">
+                                        <span>DEL</span>
+                                        <span>&rarr;</span>
+                                        <span>BOM</span>
+                                    </div>
+                                    <span class="flight-code">Flight UK-812</span>
+                                </div>
+                                <div class="mockup-flight-details">
+                                    <div class="flight-seat-info">
+                                        <span>Selected Seat</span>
+                                        <strong>12A (Window)</strong>
+                                    </div>
+                                    <div class="flight-price-badge">
+                                        <span>Fare Total</span>
+                                        <strong>&#8377; 5,840</strong>
+                                    </div>
+                                </div>
+                                <div class="mockup-payment-verify">
+                                    <span>Razorpay Secure Gateway</span>
+                                    <span class="hmac-verified-pill">HMAC Signature Verified &check;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-case-content">
+                            <div class="work-case-header">
+                                <h3 class="work-case-title">Udan Khatola</h3>
+                                <span class="work-category-tags">Full-Stack &bull; Fintech &bull; Database</span>
+                            </div>
+                            <p class="work-case-desc">An end-to-end full-stack airline reservation portal supporting complex flight searches, seating selection, ticket issuance, and automated booking cancellation workflows.</p>
+                            <ul class="work-feature-list">
+                                <li>Structured relational schema with 10+ entities and 15+ RESTful API endpoints.</li>
+                                <li>Integrated Razorpay payment processing with cryptographic HMAC signature verification.</li>
+                            </ul>
+                            <div class="work-case-footer">
+                                <div class="work-stack-pills">
+                                    <span class="stack-pill">React</span>
+                                    <span class="stack-pill">Node.js</span>
+                                    <span class="stack-pill">Express.js</span>
+                                    <span class="stack-pill">MySQL</span>
+                                    <span class="stack-pill">Razorpay</span>
+                                </div>
+                                <a href="https://github.com/sasmit206" target="_blank" rel="noopener noreferrer" class="work-link-action">
+                                    <span>View on GitHub</span>
+                                    <span aria-hidden="true">&nearr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: MTTN Literary & Cultural Essays -->
+                    <article class="work-case-card">
+                        <div class="work-preview-stage">
+                            <div class="work-preview-ambient-glow" aria-hidden="true"></div>
+                            <!-- Pure CSS Mockup: Editorial Publication Card -->
+                            <div class="mockup-article-card">
+                                <div class="mockup-article-meta">
+                                    <span>Manipal The Talk Network</span>
+                                    <span>Author Profile</span>
+                                </div>
+                                <div class="mockup-article-headline">Writing. Reading. Existing.</div>
+                                <p class="mockup-article-excerpt">Reflections exploring the friction and beauty between systems engineering, human narratives, and campus culture.</p>
+                                <div class="mockup-author-chip">
+                                    <span>By Sasmit &bull; Columnist</span>
+                                    <span style="font-weight: 600;">manipalthetalk.org</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-case-content">
+                            <div class="work-case-header">
+                                <h3 class="work-case-title">Writings @ MTTN</h3>
+                                <span class="work-category-tags">Essays &bull; Editorial &bull; Culture</span>
+                            </div>
+                            <p class="work-case-desc">Long-form writing and cultural essays authored for Manipal The Talk Network, synthesizing technology trends, philosophical musings, and student life narratives.</p>
+                            <ul class="work-feature-list">
+                                <li>Author portfolio featuring creative nonfiction, event coverage, and opinion pieces.</li>
+                                <li>Bridging technical clarity with empathetic, engaging long-form storytelling.</li>
+                            </ul>
+                            <div class="work-case-footer">
+                                <div class="work-stack-pills">
+                                    <span class="stack-pill">Creative Writing</span>
+                                    <span class="stack-pill">Essays</span>
+                                    <span class="stack-pill">Editorial</span>
+                                </div>
+                                <a href="https://www.manipalthetalk.org/articles/authors/Sasmit" target="_blank" rel="noopener noreferrer" class="work-link-action">
+                                    <span>Read Articles</span>
+                                    <span aria-hidden="true">&nearr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. SKILLS & TECHNICAL CAPABILITIES -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="skills-matrix-wrap">
+                    <div class="skills-matrix-header">
+                        <span class="section-meta-tag">/ Core Capabilities</span>
+                        <h2 class="section-headline">Technical Skills &amp; Domain Matrix</h2>
+                    </div>
+
+                    <div class="skills-grid">
+                        <!-- Column 1: Systems & Backend -->
+                        <div class="skill-category-col">
+                            <span class="skill-col-number">01</span>
+                            <h3 class="skill-col-title">Systems &amp; Backend</h3>
+                            <div class="skill-items-list">
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Docker &amp; Containers</span>
+                                    <span class="skill-entry-level">Sandboxing</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Redis</span>
+                                    <span class="skill-entry-level">Caching &bull; Queues</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Apache Kafka</span>
+                                    <span class="skill-entry-level">Streaming</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Node.js &amp; Express</span>
+                                    <span class="skill-entry-level">RESTful APIs</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">HMAC Security</span>
+                                    <span class="skill-entry-level">Signatures</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Machine Learning & AI -->
+                        <div class="skill-category-col">
+                            <span class="skill-col-number">02</span>
+                            <h3 class="skill-col-title">Machine Learning &amp; AI</h3>
+                            <div class="skill-items-list">
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">RAG Architecture</span>
+                                    <span class="skill-entry-level">LangChain</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Vector Databases</span>
+                                    <span class="skill-entry-level">Embeddings</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Random Forest</span>
+                                    <span class="skill-entry-level">Scikit-learn</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Sensor Calibration</span>
+                                    <span class="skill-entry-level">Data Fusion</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Model Benchmarking</span>
+                                    <span class="skill-entry-level">RMSE Tuning</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3: Programming Languages -->
+                        <div class="skill-category-col">
+                            <span class="skill-col-number">03</span>
+                            <h3 class="skill-col-title">Languages &amp; Web</h3>
+                            <div class="skill-items-list">
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">C++</span>
+                                    <span class="skill-entry-level">DSA &bull; Systems</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Python</span>
+                                    <span class="skill-entry-level">ML &bull; Analysis</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Java</span>
+                                    <span class="skill-entry-level">Core OOP</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">JavaScript &bull; React</span>
+                                    <span class="skill-entry-level">Modern Web</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">HTML5 &bull; CSS3</span>
+                                    <span class="skill-entry-level">Modern Layout</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 4: Databases & Tools -->
+                        <div class="skill-category-col">
+                            <span class="skill-col-number">04</span>
+                            <h3 class="skill-col-title">Data &amp; Operations</h3>
+                            <div class="skill-items-list">
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">PostgreSQL</span>
+                                    <span class="skill-entry-level">Relational &bull; Vector</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">MySQL</span>
+                                    <span class="skill-entry-level">Schemas</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Git &amp; GitHub</span>
+                                    <span class="skill-entry-level">Version Control</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">CRUD Testing</span>
+                                    <span class="skill-entry-level">QA Workflows</span>
+                                </div>
+                                <div class="skill-entry">
+                                    <span class="skill-entry-name">Linux / Unix</span>
+                                    <span class="skill-entry-level">Environments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. EDUCATION & ACHIEVEMENTS SECTION -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="edu-achieve-grid">
+                    <!-- Academic Institution Card -->
+                    <div class="edu-card-large">
+                        <div>
+                            <div class="edu-meta-top">
+                                <span class="edu-years-pill">August 2024 &ndash; May 2028</span>
+                                <span class="edu-cgpa-badge">CGPA: 8.44 / 10.0</span>
+                            </div>
+                            <h3 class="edu-institution">Manipal Institute of Technology (MIT)</h3>
+                            <div class="edu-degree">B.Tech in Information Technology</div>
+                            <p class="edu-highlights">
+                                Focused on distributed computing, database management systems, artificial intelligence, and operating systems. Balancing rigorous engineering coursework with student departmental leadership and open-source contributions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Honors & Recognition Card -->
+                    <div class="achievements-card-large">
+                        <div class="achieve-glow-corner" aria-hidden="true"></div>
+                        <div>
+                            <div class="achieve-badge-pill">
+                                <span>✦</span>
+                                <span>National Shortlist</span>
+                            </div>
+                            <h3 class="achieve-title">Goldman Sachs India Hackathon (GSIH 2026)</h3>
+                            <p class="achieve-desc">
+                                Selected as one of only 90 finalists nationwide out of more than 30,000+ applicants in one of India's most competitive engineering hackathons.
+                            </p>
+                        </div>
+                        <div class="achieve-metric-highlight">
+                            <strong>Top 0.3% Nationwide</strong>
+                            <span>Shortlisted after multi-tier technical &amp; algorithmic rounds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. CLOSING & CONTACT SECTION -->
+        <section id="contact" class="contact-closing-section">
+            <div class="container">
+                <div class="closing-editorial-banner">
+                    <div class="closing-ambient-orb" aria-hidden="true"></div>
+
+                    <div class="closing-content-block">
+                        <div class="closing-subhead">/ Let's Connect</div>
+                        <h2 class="closing-title">Have an ambitious project or role in mind? <em>Let's talk.</em></h2>
+                        <p class="closing-desc">
+                            Currently open to summer 2026 internships, research fellowships, and full-stack/ML engineering roles. Always keen to collaborate on high-impact distributed systems and creative ideas.
+                        </p>
+
+                        <div class="closing-cta-group">
+                            <a href="mailto:sasmit206@gmail.com" class="closing-email-btn">
+                                <span>sasmit206@gmail.com</span>
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                            <a href="https://github.com/sasmit206" target="_blank" rel="noopener noreferrer" class="closing-resume-btn">
+                                <span>Explore GitHub</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+
+                        <!-- Network & Social Directory -->
+                        <div class="social-network-directory">
+                            <a href="mailto:sasmit206@gmail.com" class="network-link-item">
+                                <span class="network-label">Email</span>
+                                <span class="network-val">sasmit206@gmail.com <span class="arrow-tiny">&nearr;</span></span>
+                            </a>
+                            <a href="https://github.com/sasmit206" target="_blank" rel="noopener noreferrer" class="network-link-item">
+                                <span class="network-label">GitHub</span>
+                                <span class="network-val">github.com/sasmit206 <span class="arrow-tiny">&nearr;</span></span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sasmit206/" target="_blank" rel="noopener noreferrer" class="network-link-item">
+                                <span class="network-label">LinkedIn</span>
+                                <span class="network-val">sasmit206 <span class="arrow-tiny">&nearr;</span></span>
+                            </a>
+                            <a href="https://leetcode.com/u/sasmit206/" target="_blank" rel="noopener noreferrer" class="network-link-item">
+                                <span class="network-label">LeetCode</span>
+                                <span class="network-val">sasmit206 <span class="arrow-tiny">&nearr;</span></span>
+                            </a>
+                            <a href="https://x.com/sasmit206" target="_blank" rel="noopener noreferrer" class="network-link-item">
+                                <span class="network-label">X / Twitter</span>
+                                <span class="network-val">@sasmit206 <span class="arrow-tiny">&nearr;</span></span>
+                            </a>
+                            <a href="https://www.manipalthetalk.org/articles/authors/Sasmit" target="_blank" rel="noopener noreferrer" class="network-link-item">
+                                <span class="network-label">Writing</span>
+                                <span class="network-val">MTTN Articles <span class="arrow-tiny">&nearr;</span></span>
+                            </a>
+                            <div class="network-link-item">
+                                <span class="network-label">Phone</span>
+                                <span class="network-val">+91 9717457309</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; Part of a submission for </p>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content-wrap">
+                <div class="footer-col-left">
+                    <span class="footer-author-brand">Sasmit</span>
+                    <span class="footer-tagline">&mdash; Full-Stack &amp; ML Engineer &bull; MIT Manipal</span>
+                </div>
+                <div class="footer-col-right">
+                    <span>Editorial Minimalist Portfolio &copy; 2026 &bull; Semantic HTML5 &amp; Pure CSS</span>
+                </div>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
